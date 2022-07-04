@@ -5,9 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="simple wikipedia clone" />
+
     <title>Wikipedia</title>
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@500&display=swap" rel="stylesheet">
     <link rel="shortcut icon"
+        href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Wikipedia_Logo_1.0.png/220px-Wikipedia_Logo_1.0.png"
+        type="image/x-icon">
+    <link rel="apple-touch-icon"
         href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Wikipedia_Logo_1.0.png/220px-Wikipedia_Logo_1.0.png"
         type="image/x-icon">
     <link rel="stylesheet" href="style.css">
@@ -15,25 +20,18 @@
 
 <body>
     <div class="main">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Wikipedia-logo-v2-en.svg/892px-Wikipedia-logo-v2-en.svg.png"
-            alt="logo" id="wiki" />
-
+        <img src="wikipedia.webp" alt="logo" id="wiki" width="15em" height="auto" />
         <form action="">
-            <input type="text" id="search_value" />
-            <button type="submit"><img
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/1024px-Search_Icon.svg.png"
-                    alt="" id="search"></button>
+            <input type="text" id="search_value" aria-label="input" />
+            <button type="submit" aria-label="search"><img src="search.webp" alt="search icon" id="search"
+                    width="1.5rem" height="auto" /></button>
         </form>
     </div>
-
     <div class="allWikis">
         <div class="results">
-            <div class="error">
-
-            </div>
+            <div class="error"></div>
         </div>
     </div>
-
     <script src="app.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>
