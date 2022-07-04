@@ -1,0 +1,126 @@
+body {
+    background: linear-gradient(to bottom, white, #eee);
+    font-family: 'Satoshi', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+#wiki {
+    width: 15em;
+    margin-bottom: 2rem;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+input {
+    font-size: 1.5rem;
+    padding-left: 10px;
+    font-family: 'Satoshi', sans-serif;
+}
+
+button {
+    height: 2.4rem;
+    cursor: pointer;
+}
+
+button:hover {
+    box-shadow: 1px 1px 2px #66666650;
+}
+
+button img {
+    width: 2rem;
+}
+
+.error {
+    display: none;
+    color: red;
+}
+
+.allWikis {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.results {
+    margin: 20px 0 20px;
+    padding: 0px 30px 0px;
+    width: 75%;
+    border-radius: 25px;
+
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.results h4 {
+    font-size: 2rem;
+    color: #000;
+    padding: 0;
+    margin: 20px 0 0;
+}
+
+.results p {
+    font-size: 1rem;
+    color: #00000099;
+}
+
+.cards {
+    background: #666;
+}
+
+hr {
+    width: 75%;
+    text-shadow: none;
+    height: 1px;
+    border: none;
+    background: #000;
+    opacity: 0.1;
+}
+
+/* media queries */
+@media screen and (max-width:650px) {
+    #wiki {
+        width: 10rem;
+        margin-bottom: 10px;
+    }
+
+    input {
+        font-size: 18px;
+    }
+
+    button {
+        height: 2rem;
+    }
+
+    #search {
+        width: 1.5rem
+    }
+
+    .results h4 {
+        font-size: 1.5rem;
+    }
+
+    .results p {
+        font-size: 1rem;
+    }
+}
