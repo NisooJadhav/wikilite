@@ -19,6 +19,7 @@ wikiform.addEventListener('submit', (e) => {
 
 const fetchWikis = async (value) => {
 	try {
+		// Displaying the loader
 		loader.style.display = 'flex';
 
 		const response = await fetch(`${url},${value}`);
@@ -42,6 +43,7 @@ const fetchWikis = async (value) => {
 		$('.error').fadeIn(1000);
 		return;
 	} finally {
+		//Hiding the loader
 		loader.style.display = 'none';
 	}
 };
