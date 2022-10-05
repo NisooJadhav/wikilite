@@ -13,6 +13,7 @@ body {
     font-family: 'Satoshi', sans-serif;
     padding:0;
     margin:0;
+    position: relative;
 }
 
 a {
@@ -108,6 +109,39 @@ hr {
     background: #000;
     opacity: 0.1;
 }
+
+.loader-wrapper{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    z-index: 2;
+    background-color: rgba(204, 204, 204, 0.672);
+    
+}
+
+.loader-wrapper .loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid rgb(70, 70, 70);
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+} 
 
 /* media queries */
 @media screen and (max-width:650px) {

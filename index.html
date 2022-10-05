@@ -1,37 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="simple wikipedia clone" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="simple wikipedia clone" />
+		<title>Wikipedia</title>
+		<link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Wikipedia_Logo_1.0.png/220px-Wikipedia_Logo_1.0.png" type="image/x-icon" />
+		<link rel="apple-touch-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Wikipedia_Logo_1.0.png/220px-Wikipedia_Logo_1.0.png" type="image/x-icon" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
 
-    <title>Wikipedia</title>
-    <link rel="shortcut icon"
-        href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Wikipedia_Logo_1.0.png/220px-Wikipedia_Logo_1.0.png"
-        type="image/x-icon">
-    <link rel="apple-touch-icon"
-        href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Wikipedia_Logo_1.0.png/220px-Wikipedia_Logo_1.0.png"
-        type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-</head>
+	<body>
+		<div class="main">
+			<img src="wikipedia.webp" alt="logo" id="wiki" width="15em" height="auto" />
+			<form action="">
+				<input type="text" id="search_value" aria-label="input" placeholder="search term..." />
+				<button type="submit" aria-label="search"><img src="search.webp" alt="search icon" id="search" width="1.5rem" height="auto" /></button>
+			</form>
+		</div>
 
-<body>
-    <div class="main">
-        <img src="wikipedia.webp" alt="logo" id="wiki" width="15em" height="auto" />
-        <form action="">
-            <input type="text" id="search_value" aria-label="input" placeholder="search term..."/>
-            <button type="submit" aria-label="search"><img src="search.webp" alt="search icon" id="search"
-                    width="1.5rem" height="auto" /></button>
-        </form>
-    </div>
-    <div class="allWikis">
-        <div class="results">
-            <div class="error"></div>
-        </div>
-    </div>
-    <script src="app.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-</body>
+		<div class="loader-wrapper" id="loader-wrapper">
+			<span class="loader"></span>
+		</div>
+
+		<div class="allWikis">
+			<div class="results">
+				<div class="error"></div>
+			</div>
+		</div>
+		<script src="app.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	</body>
 </html>
