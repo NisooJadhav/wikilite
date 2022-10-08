@@ -1,172 +1,210 @@
 @font-face {
-  font-family: 'Satoshi';
-  src: url('//cdn.fontshare.com/wf/P2LQKHE6KA6ZP4AAGN72KDWMHH6ZH3TA/ZC32TK2P7FPS5GFTL46EU6KQJA24ZYDB/7AHDUZ4A7LFLVFUIFSARGIWCRQJHISQP.woff2') format('woff2'),
-       url('//cdn.fontshare.com/wf/P2LQKHE6KA6ZP4AAGN72KDWMHH6ZH3TA/ZC32TK2P7FPS5GFTL46EU6KQJA24ZYDB/7AHDUZ4A7LFLVFUIFSARGIWCRQJHISQP.woff') format('woff'),
-       url('//cdn.fontshare.com/wf/P2LQKHE6KA6ZP4AAGN72KDWMHH6ZH3TA/ZC32TK2P7FPS5GFTL46EU6KQJA24ZYDB/7AHDUZ4A7LFLVFUIFSARGIWCRQJHISQP.ttf') format('truetype');
+  font-family: "Satoshi";
+  src: url("//cdn.fontshare.com/wf/P2LQKHE6KA6ZP4AAGN72KDWMHH6ZH3TA/ZC32TK2P7FPS5GFTL46EU6KQJA24ZYDB/7AHDUZ4A7LFLVFUIFSARGIWCRQJHISQP.woff2")
+      format("woff2"),
+    url("//cdn.fontshare.com/wf/P2LQKHE6KA6ZP4AAGN72KDWMHH6ZH3TA/ZC32TK2P7FPS5GFTL46EU6KQJA24ZYDB/7AHDUZ4A7LFLVFUIFSARGIWCRQJHISQP.woff")
+      format("woff"),
+    url("//cdn.fontshare.com/wf/P2LQKHE6KA6ZP4AAGN72KDWMHH6ZH3TA/ZC32TK2P7FPS5GFTL46EU6KQJA24ZYDB/7AHDUZ4A7LFLVFUIFSARGIWCRQJHISQP.ttf")
+      format("truetype");
   font-weight: 500;
   font-display: swap;
   font-style: normal;
 }
 
+:root {
+  --bcg: #fff;
+  --stroke: #303030;
+  --body-bcg: #eee;
+  --bcg-results: #eee;
+  --fill: transparent;
+}
+
+.dark-theme {
+  --bcg: #303030;
+  --stroke: #fff;
+  --body-bcg: #333;
+  --bcg-results: #222;
+  --fill: yellow;
+}
+
+svg {
+  width: 2%;
+  position: fixed;
+  cursor: pointer;
+  box-shadow: 1px 1px 5px #00000025;
+  border-radius: 50%;
+  padding: 10px;
+  bottom: 0;
+  z-index: 3;
+  background: var(--bcg-results);
+  float: right;
+  margin: 10px 10px;
+  fill: var(--fill);
+  stroke: #000;
+}
+
 body {
-    background: #eee;
-    font-family: 'Satoshi', sans-serif;
-    padding:0;
-    margin:0;
-    position: relative;
+  background: var(--body-bcg);
+  font-family: "satoshi", sans-serif;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  transition: all 0.3s;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 #wiki {
-    width: 15em;
-    margin-bottom: 2rem;
+  width: 15em;
+  margin-bottom: 2rem;
 }
 
 .main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 form {
-    width: 75%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
+  width: 75%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
 }
 
 input {
-    font-size: 1.5rem;
-    padding-left: 10px;
-    font-family: 'Satoshi', sans-serif;
+  font-size: 1.5rem;
+  padding-left: 10px;
+  font-family: "Satoshi", sans-serif;
 }
 
 button {
-    height: 2.2rem;
-    cursor: pointer;
+  height: 2.2rem;
+  cursor: pointer;
 }
 
 button:hover {
-    box-shadow: 1px 1px 2px #66666650;
+  box-shadow: 1px 1px 2px #66666650;
 }
 
 button img {
-    width: 2rem;
+  width: 2rem;
 }
 
 .error {
-    display: none;
-    color: red;
+  display: none;
+  color: red;
 }
 
 .allWikis {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .results {
-    margin: 20px 0 20px;
-    padding: 0px 30px 0px;
-    width: 75%;
-    border-radius: 25px;
+  margin: 20px 0 20px;
+  padding: 0px 30px 0px;
+  width: 75%;
+  border-radius: 25px;
 
-    background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+  background: var(--bcg-results);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
 .results h4 {
-    font-size: 2rem;
-    color: #000;
-    padding: 0;
-    margin: 20px 0 0;
+  font-size: 2rem;
+  color: var(--stroke);
+  padding: 0;
+  margin: 20px 0 0;
 }
 
 .results p {
-    font-size: 1rem;
-    color: #00000099;
+  font-size: 1rem;
+  color: var(--stroke);
 }
 
 .cards {
-    background: #666;
+  background: #666;
 }
 
 hr {
-    width: 75%;
-    text-shadow: none;
-    height: 1px;
-    border: none;
-    background: #000;
-    opacity: 0.1;
+  width: 75%;
+  text-shadow: none;
+  height: 1px;
+  border: none;
+  background: #000;
+  opacity: 0.1;
 }
 
-.loader-wrapper{
-    display: none;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-    top: 0;
-    z-index: 2;
-    background-color: rgba(204, 204, 204, 0.672);
-    
+.loader-wrapper {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  z-index: 2;
+  background-color: rgba(204, 204, 204, 0.8);
 }
 
 .loader-wrapper .loader {
-    width: 48px;
-    height: 48px;
-    border: 5px solid rgb(70, 70, 70);
-    border-bottom-color: transparent;
-    border-radius: 50%;
-    display: inline-block;
-    box-sizing: border-box;
-    animation: rotation 1s linear infinite;
+  width: 48px;
+  height: 48px;
+  border: 5px solid rgb(70, 70, 70);
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
 }
 
 @keyframes rotation {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-} 
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 /* media queries */
-@media screen and (max-width:650px) {
-    #wiki {
-        width: 10rem;
-        margin-bottom: 10px;
-    }
+@media screen and (max-width: 650px) {
+  svg {
+    width: 5%;
+  }
+  #wiki {
+    width: 10rem;
+    margin-bottom: 10px;
+  }
 
-    input {
-        font-size: 18px;
-    }
+  input {
+    font-size: 18px;
+  }
 
-    button {
-        height: 2rem;
-    }
+  button {
+    height: 2rem;
+  }
 
-    #search {
-        width: 1.5rem
-    }
+  #search {
+    width: 1.5rem;
+  }
 
-    .results h4 {
-        font-size: 1.5rem;
-    }
+  .results h4 {
+    font-size: 1.5rem;
+  }
 
-    .results p {
-        font-size: 1rem;
-    }
+  .results p {
+    font-size: 1rem;
+  }
 }
