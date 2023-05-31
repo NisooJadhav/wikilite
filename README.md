@@ -1,5 +1,7 @@
 # Welcome to [WikiLite!](https://wikilite.vercel.app/) 🌍
 
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/nisoojadhav/wikilite)
+
 WikiLite is a simple Wikipedia clone that allows you to explore a vast collection of articles on various topics. With its intuitive interface and handy features, you can easily search for articles, visit them, and even switch between dark mode and light mode. 🌙🌞
 
 ## Features
@@ -10,7 +12,7 @@ WikiLite is a simple Wikipedia clone that allows you to explore a vast collectio
 🌓 Dark Mode - Light Mode Switcher: Customize your reading experience by toggling between dark mode and light mode. Whether you prefer a darker theme for late-night reading or a lighter one for daytime browsing, WikiLite has you covered.
 
 ## License
-This project is licensed under the GNU General Public License. Feel free to modify and distribute it according to your needs.
+This project is licensed under the [GNU General Public License](https://www.gnu.org/licenses/gpl-3.0.en.html). Feel free to modify and distribute it according to your needs.
 
 ## Acknowledgements
 We would like to express our gratitude to the open-source community for their inspiring contributions and the invaluable resources they provide.
