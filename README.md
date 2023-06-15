@@ -1,6 +1,7 @@
 # Welcome to [WikiLite!](https://wikilite.vercel.app/) 🌍
 
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/nisoojadhav/wikilite)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge)](https://github.com/nisoojadhav/wikilite)
+[![Web Performance](https://img.shields.io/badge/%F0%9F%93%8A-Web%20Performance-blue.svg?style=for-the-badge&)](https://pagespeed.web.dev/analysis/https-wikilite-vercel-app/qb8vwshqvv?form_factor=desktop)
 
 WikiLite is a simple Wikipedia clone that allows you to explore a vast collection of articles on various topics. With its intuitive interface and handy features, you can easily search for articles, visit them, and even switch between dark mode and light mode. 🌙🌞
 
